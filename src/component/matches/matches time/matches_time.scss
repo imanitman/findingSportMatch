@@ -1,0 +1,21 @@
+.xitem .xitem-main .xinfo {
+    width: 80px;
+    margin: 0 10px 15px;
+    text-align: center;
+    flex-shrink: 0;
+}
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+.xitem .xitem-main .xinfo .status {
+    font-size: 1.6em;
+    font-weight: 500;
+}
+.xitem .xitem-main .xinfo>div {
+    margin-bottom: 7px;
+}
+
+.xitem .xitem-main .xinfo>div:last-of-type {
+    margin-bottom: 0;
+}

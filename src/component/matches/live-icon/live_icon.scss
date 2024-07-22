@@ -1,0 +1,31 @@
+.stick {
+    position: absolute;
+    top: .5rem;
+    left: .5rem;
+    font-size: 11px;
+    line-height: 1em;
+    font-weight: 500;
+    padding: 6px 10px;
+    border-radius: 20px;
+    z-index: 4;
+}
+
+.live {
+    background: #f2152d;
+    color: #fff;
+    text-transform: uppercase;
+    box-shadow: 0 0 20px rgba(251, 8, 64, .5);
+}
+
+i {
+    font-style: italic;
+}
+
+.dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #fff;
+    display: inline-block;
+    margin: 2px 6px;
+}
