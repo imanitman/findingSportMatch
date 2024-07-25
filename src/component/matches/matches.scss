@@ -1,0 +1,20 @@
+.Matches {
+    background-color: gray;
+    border-radius: 10px;
+}
+.score {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10px;
+}
+
+.foot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-top: 1px dashed rgba(255, 255, 255, .15);
+}
+.live_icon{
+    position: relative;
+}

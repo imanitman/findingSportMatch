@@ -1,0 +1,40 @@
+.xinfo {
+    width: 80px;
+    margin: 0 10px 15px;
+    text-align: center;
+    flex-shrink: 0;
+}
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+.result {
+    display: flex;
+    justify-content: center;
+}
+
+.xinfo>div {
+    margin-bottom: 7px;
+}
+
+.xitem .xitem-main .xinfo .result>div {
+    font-size: 1.8em;
+    font-weight: 600;
+}
+
+.xitem .xitem-main .xinfo .result>div.xspace {
+    padding: 0 10px;
+    color: #8e8f92;
+}
+.xitem .xitem-main .xinfo .result>div {
+    font-size: 1.8em;
+    font-weight: 600;
+}
+
+.xinfo .time-loaded {
+    font-size: 1.1em;
+    font-weight: 500;
+    color: #25ff70;
+}
+

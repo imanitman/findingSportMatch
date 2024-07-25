@@ -1,0 +1,38 @@
+.team {
+    text-align: center;
+    width: calc(50% - 10px - 40px);
+    flex-shrink: 0;
+}
+
+.team-logo {
+    display: block;
+    position: relative;
+    height: 60px;
+    width: 60px;
+}
+.team-logo .team-logo-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.team .team-logo {
+    display: inline-block;
+    margin: 0 auto;
+}
+
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+
+.xname {
+    display: flex;
+    height: 36px;
+    justify-content: center;
+    align-items: center;
+}
