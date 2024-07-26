@@ -17,7 +17,7 @@ function Button() {
                     target="_blank" 
                     rel="nofollow" 
                     className="btn btn-sm btn-betnow">
-                        Lên Kèo
+                        Tham gia
                 </a>
             </div>
         </div>

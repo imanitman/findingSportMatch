@@ -8,10 +8,10 @@ function Team(props) {
                 <img 
                     className="team-logo-img" 
                     loading="lazy"
-                    src="https://img.thesports.com/football/team/ad010af729c420626d1865ad744168d3.png"/>
+                    src="https://img.thesports.com/football/team/024fe33eb47d62a23b549ecd97af6762.png"/>
             </div>
             <div className="xname">
-                <h3 className="team-name">FC Seoul</h3>
+                <h3 className="team-name">Juventus</h3>
                 <div className="xcards"></div>
             </div>
         </div>
