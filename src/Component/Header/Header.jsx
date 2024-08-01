@@ -3,7 +3,7 @@ import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 
 const navigation = [
     { name: 'Trang chủ', href: '#', current: true },
-    { name: 'Bóng đá', href: '#', current: false },
+    { name: 'Bóng đá', href: '/football', current: false },
     { name: 'Bóng chuyền', href: '#', current: false },
     { name: 'Bóng rổ', href: '#', current: false },
     { name: 'Cầu lông', href: '#', current: false },
@@ -59,7 +59,6 @@ function Header() {
                 <div className="hidden sm:ml-6 sm:block"><button className=''>Your Match</button></div>
                 <div className="hidden sm:ml-6 sm:block"><button className='text-red-500'>Report</button></div>
             </div>
-            
           </div>
           <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
             <button
