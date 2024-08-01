@@ -11,9 +11,12 @@
   },
   "dependencies": {
     "@headlessui/react": "^2.1.2",
+    "@heroicons/react": "^2.1.5",
     "bootstrap-icons": "^1.11.3",
+    "findingsportmatch": "file:",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-router-dom": "^6.26.0",
     "sass": "^1.77.8"
   },
   "devDependencies": {

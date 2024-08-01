@@ -5,7 +5,7 @@ import './caster.scss';
 function Caster() {
     return (
         <div className="xcommentator">
-            <i class="bi bi-geo-alt-fill mr-1"></i>
+            <i className="bi bi-geo-alt-fill mr-1"></i>
             Địa điểm
         </div>
     )

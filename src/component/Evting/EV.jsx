@@ -10,10 +10,8 @@ function EV(){
             <div className="w-1/2">
                 <EventHead />
                 <div className="flex justify-between">
-                    <div className="content-evenly">
+                    <div className="flex items-center content-evenly">
                         <EVImg />
-                    </div>
-                    <div className="content-evenly ">
                         <EVDetail />
                     </div>
                     <div className="content-evenly ">
@@ -24,10 +22,8 @@ function EV(){
             <div className="w-1/2 ml-4 mr-4 border-solid border-l-2">
                 <EventHead />
                 <div className="flex justify-between">
-                    <div className="content-evenly">
+                    <div className="flex items-center content-evenly">
                         <EVImg />
-                    </div>
-                    <div className="content-evenly ">
                         <EVDetail />
                     </div>
                     <div className="content-evenly ">

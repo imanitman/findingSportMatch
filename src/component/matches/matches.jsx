@@ -13,7 +13,31 @@ function Matches(){
     return (
         <div className="mt-3">
             <p className="font-bold text-3xl border-l-4 pl-3 mb-3 ">Các trận đấu hấp dẫn</p>
-            <div className="flex flex-row gap-5">
+            <div className="flex flex-wrap gap-5 ml-5">
+            <div className="Matches w-1/4 bg-zinc-800">
+                <Tournament />
+                <div className="score">
+                    <Team />
+                    <Matches_time />
+                    <Team />
+                </div>
+                <div className="foot">
+                    <Caster />
+                    <Button />
+                </div>
+            </div>
+            <div className="Matches w-1/4 bg-zinc-800">
+                <Tournament />
+                <div className="score">
+                    <Team />
+                    <Matches_time />
+                    <Team />
+                </div>
+                <div className="foot">
+                    <Caster />
+                    <Button />
+                </div>
+            </div>
             <div className="Matches w-1/4 bg-zinc-800">
                 <Tournament />
                 <div className="score">

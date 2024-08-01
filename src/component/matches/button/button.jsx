@@ -7,7 +7,7 @@ function Button() {
             <div className="ibs-live">
                 <a 
                     href="#" 
-                    class="btn btn-sm">
+                    className="btn btn-sm">
                         Chi tiết
                     </a>
             </div>
