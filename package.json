@@ -12,6 +12,8 @@
   "dependencies": {
     "@headlessui/react": "^2.1.2",
     "@heroicons/react": "^2.1.5",
+    "@react-oauth/google": "^0.12.1",
+    "axios": "^1.7.3",
     "bootstrap-icons": "^1.11.3",
     "findingsportmatch": "file:",
     "react": "^18.3.1",

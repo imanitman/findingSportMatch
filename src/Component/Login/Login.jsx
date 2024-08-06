@@ -1,3 +1,4 @@
+import BtnGoogleLogin from "./GoogleLogin"
 
 export default function Login(){
     return(
@@ -85,6 +86,7 @@ export default function Login(){
                 >
                   Sign in
                 </button>
+                <BtnGoogleLogin className="rounded-md"></BtnGoogleLogin>
                 <p className="text-sm font-light text-gray-500 dark:text-gray-400">
                   Don’t have an account yet?{" "}
                   <a

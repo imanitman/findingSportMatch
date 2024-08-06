@@ -3,10 +3,11 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
 import  {RouterProvider, createBrowserRouter} from "react-router-dom"
-import Login from './Component/Login.jsx'
-import Signup from './Component/Signup.jsx'
+import Login from './Component/Login/Login.jsx'
+import Signup from './Component/Login/Signup.jsx'
 import AllMatchs from './Component/DetailSport/Football/allMatch.jsx'
 import Football from './Component/DetailSport/Football/Football.jsx'
+import RelatedMatchs from './Component/DetailMatch/DetailMatch.jsx'
 
 const routers =  createBrowserRouter([
   {
@@ -24,6 +25,10 @@ const routers =  createBrowserRouter([
   {
     path:"/football",
     element:<Football></Football>
+  },
+  {
+    path:"/football/detail",
+    element:<RelatedMatchs></RelatedMatchs>
   }
 ])
 ReactDOM.createRoot(document.getElementById('root')).render(

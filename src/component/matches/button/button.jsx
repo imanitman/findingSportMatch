@@ -6,7 +6,7 @@ function Button() {
         <div className="xitem-buttons">
             <div className="ibs-live">
                 <a 
-                    href="#" 
+                    href="/football/detail" 
                     className="btn btn-sm">
                         Chi tiết
                     </a>
