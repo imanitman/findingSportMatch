@@ -56,7 +56,7 @@ function Header() {
             </div>
             <div className='flex ml-4'>
                 <div className="hidden sm:ml-6 sm:block"><button className=''>Contact us</button></div>
-                <div className="hidden sm:ml-6 sm:block"><button className=''>Your Match</button></div>
+                <div className="hidden sm:ml-6 sm:block"><button className=''>My Match</button></div>
                 <div className="hidden sm:ml-6 sm:block"><button className='text-red-500'>Report</button></div>
             </div>
           </div>
