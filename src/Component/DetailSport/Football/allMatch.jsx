@@ -43,8 +43,6 @@ export default function AllMatchs(){
                     <Button></Button>
                 </div>
             </div>
-
- 
         </div>
     )
 }
