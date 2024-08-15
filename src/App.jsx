@@ -6,6 +6,9 @@ import Matches from "./Component/matches/matches.jsx";
 import Slideshow from "./Component/Page3ImageSlideBar/Slideshow.jsx";
 import TeamVS from "./Component/Page3ImageSlideBar/TeamVS.jsx";
 import ContentPlace from "./Component/Page3ImageSlideBar/ContentPlace.jsx";
+import AddressMap from "./Component/MatchesRequestPopUP/AddressMap.jsx";
+import SelectOption from "./Component/MatchesRequestPopUP/SelectOption.jsx";
+import SelectAddress from "./Component/MatchesRequestPopUP/SelectAddress.jsx";
 
 function App() {
   return (
@@ -17,7 +20,11 @@ function App() {
       <EV></EV> */}
       {/* <Slideshow /> */}
       {/* <TeamVS/> */}
-      <ContentPlace />
+      {/* <ContentPlace /> */}
+      {/* <SelectMap /> */}
+      <AddressMap />
+      {/* <SelectOption /> */}
+      {/* <SelectAddress /> */}
     </>
   )
 }
