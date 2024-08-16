@@ -8,6 +8,7 @@ import Signup from './Component/Login/Signup.jsx'
 import AllMatchs from './Component/DetailSport/Football/allMatch.jsx'
 import Football from './Component/DetailSport/Football/Football.jsx'
 import RelatedMatchs from './Component/DetailMatch/DetailMatch.jsx'
+import MyMatch from './Component/MyMatch/MyMatch.jsx'
 
 const routers =  createBrowserRouter([
   {
@@ -29,6 +30,10 @@ const routers =  createBrowserRouter([
   {
     path:"/football/detail",
     element:<RelatedMatchs></RelatedMatchs>
+  },
+  {
+    path:"/mymatch",
+    element:<MyMatch />
   }
 ])
 ReactDOM.createRoot(document.getElementById('root')).render(

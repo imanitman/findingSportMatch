@@ -17,8 +17,8 @@ const navigation = [
 
 function Header() {
   return (
-       <Disclosure as="nav" className="bg-gray-800 w-full">
-      <div className="mx-auto w-full sm:px-6 px-2 lg:px-8">
+       <Disclosure as="nav" className="bg-gray-800 w-full sticky top-0 fixed top-0 left-0 right-0 p-2">
+      <div className="mx-auto w-screen sm:px-6 px-2 lg:px-8 ">
         <div className="relative flex h-16 items-center justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
             {/* Mobile menu button*/}

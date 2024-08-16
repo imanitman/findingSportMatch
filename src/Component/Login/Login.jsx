@@ -1,7 +1,8 @@
 import BtnGoogleLogin from "./GoogleLogin"
-
+import axios from "axios"
 export default function Login(){
-    return(
+
+  return(
         <div>
         <section className="w-screen bg-gray-50 dark:bg-gray-900">
         <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
