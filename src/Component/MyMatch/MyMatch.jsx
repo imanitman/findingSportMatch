@@ -4,10 +4,11 @@ import Team from "../matches/team/team"
 import Matches_time from "../matches/matches time/matches_time"
 export default function MyMatch(){
     return (
-        <>
+        <div className="container h-screen">
             <Header></Header>
-            <div className="">
-            <div className="container mx-auto flex gap-10 items-center mt-3 h-screen">
+            <div className="mx-auto ml-10 w-5/6 p-8">
+            <p className="mb-10 text-3xl text-blue-600 ">Các trận đấu của bạn</p>
+            <div className="flex items-center gap-12">
                 <div className="flex gap-4">
                     <Team></Team>
                     <Matches_time />
@@ -25,8 +26,10 @@ export default function MyMatch(){
                     <button className="bg-blue-400">Sửa thông tin</button>
                 </div>
             </div>
-            <button type="submit">Tạo trận đấu mới </button>
+            <div className="mt-10 auto text-center ">
+                <button className="bg-sky-300">Tạo trận đấu mới</button>
             </div>
-        </>
+            </div>
+        </div>
     )
 }
