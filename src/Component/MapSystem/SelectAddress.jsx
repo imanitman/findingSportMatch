@@ -30,7 +30,7 @@ function SelectAddress(props) {
     }
 
     return (
-        <div className="flex justify-around">
+        <div className="sm:flex sm:justify-around">
             <SelectOption
                 Name="Tỉnh/Thành"
                 Data={ProvinceData}
