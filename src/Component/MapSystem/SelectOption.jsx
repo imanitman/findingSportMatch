@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import { ProvinceAPI, DistrictAPI, CommuneAPI } from "./APITinhThanh";
+import React from "react";
 
 function SelectOption(props) {
 
