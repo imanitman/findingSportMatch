@@ -2,7 +2,7 @@ import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuIt
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 
 const navigation = [
-    { name: 'Trang chủ', href: '#', current: true },
+    { name: 'Trang chủ', href: '#', current: true},
     { name: 'Bóng đá', href: '/football', current: false },
     { name: 'Bóng chuyền', href: '#', current: false },
     { name: 'Bóng rổ', href: '#', current: false },

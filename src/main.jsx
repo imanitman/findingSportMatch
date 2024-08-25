@@ -29,7 +29,7 @@ const routers =  createBrowserRouter([
     element:<Football></Football>
   },
   {
-    path:"/football/detail",
+    path:"/detail",
     element:<RelatedMatchs></RelatedMatchs>
   },
   {

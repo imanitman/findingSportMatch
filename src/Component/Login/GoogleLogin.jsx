@@ -8,7 +8,7 @@ export default function BtnGoogleLogin() {
     const handleLoginSuccess = async (resGoogle) => {
         const tokenGo = resGoogle.credential;
         try {
-            const response = await axios.post('http://localhost:8080/auth/google', { token: tokenGo });
+            const response = await axios.post('http://localhost:8080/auth/google', {token: tokenGo });
             if (response.data) {
                 console.log("Verified successfully");
             } else {
