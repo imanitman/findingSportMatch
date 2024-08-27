@@ -3,17 +3,19 @@ import axios from "axios"
 import { useState } from "react"
 import React from "react"
 export default function Login(){
-    const [username, setUsername]= useState("")
-    const [password, setPassword]= useState("")
-    const handleLogin = async() =>{
-      const response = await axios.post("http://localhost:8080/auth/login",{username, password})
-      if (response){
-        console.log(response);
+  const [username, setUsername] = useState("")
+  const [password, setPassword] = useState("")
+  const handleBtnLogin = async(e) =>{
+    e.preventDefault();
+    try{
+      const response =  await axios.post("http://localhost:8080/auth/login",{username, password})
+      if (response != null){
+        console.log("log in successfull");
       }
-      else{
-        console.log("error from backend");
-      }
+    }catch(error){
+      console.log("error" + error);
     }
+  }
     return(
         <div>
         <section className="w-screen bg-gray-50 dark:bg-gray-900">
@@ -34,7 +36,7 @@ export default function Login(){
               <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
                 Sign in to your account
               </h1>
-              <form className="space-y-4 md:space-y-6" action="#">
+              <form className="space-y-4 md:space-y-6" method="Post" action="/auth/login">
                 <div>
                   <label
                     htmlFor="email"
@@ -96,9 +98,9 @@ export default function Login(){
                   </a>
                 </div>
                 <button
-                  onClick={handleLogin}
                   type="submit"
                   className="w-full text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+                  onClick={handleBtnLogin}
                 >
                   Sign in
                 </button>
@@ -119,5 +121,4 @@ export default function Login(){
       </section>
       </div>
     )
-        
 }

@@ -1,17 +1,16 @@
+import { useState } from "react"
 import axios from "axios"
-import React from "react"
-import { useState, useEffect } from "react"
 export default function Signup() {
+    const [username, setUsername] = useState("")
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
-    const [name, setName] = useState("")
-    const handleSignup = async() => {
-        const res = await axios.post("http://localhost:8080/auth/signup",{name,email,password})
-        if (res){
-            console.log(res);
-        }
-        else{
-            console.log("backend error");
+    const [address, setAddress] = useState("")
+    const [phoneNumber, setPhoneNumber] = useState("")
+    const handleBtnSignup = async () => {
+        try {
+            const res = await axios.post("http://localhost:8080/auth/signup", { username, email, password, address, phoneNumber})
+        }catch (error){
+            console.log(error);
         }
     }
     return (
@@ -34,22 +33,63 @@ export default function Signup() {
                             Create an account
                         </h1>
                         <form className="space-y-4 md:space-y-6" action="#">
-                        <div>
+                            <div>
                                 <label
-                                    htmlFor="text"
+                                    htmlFor="email"
                                     className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-
                                 >
-                                    User name
+                                    Your name
                                 </label>
                                 <input
-                                    type="email"
-                                    name="email"
-                                    id="name"
+                                    type="text"
+                                    name="username"
+                                    id="username"
                                     className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                    placeholder="user name"
+                                    placeholder="your name"
                                     required=""
-                                    onChange={(e)=> setName(e.target.value)}
+                                    onChange={(e) => setUsername(e.target.value)}
+                                />
+                            </div>
+                            <div>
+                                <div className="max-w-sm mx-auto">
+                                    <label
+                                        htmlFor="countries_disabled"
+                                        className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                                    >
+                                        Select an option
+                                    </label>
+                                    <select
+                                        onChange={(e)=>setAddress(e.target.value)}
+                                        disabled=""
+                                        id="countries_disabled"
+                                        className="bg-gray-50 border border-gray-300 text-gray-500 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:text-white"
+                                    >
+                                        <option value="">Chọn Thành Phố</option>
+                                        <option value="Ha Noi">Hà Nội</option>
+                                        <option value="Ho Chi Minh">Hồ Chí Minh</option>
+                                        <option value="Da Nang">Đà Nẵng</option>
+                                        <option value="Hai Phong">Hải Phòng</option>
+                                        <option value="Hue">Hue</option>
+                                        <option value="Quang Ninh">Quang Ninh</option>
+                                    </select>
+                                </div>
+
+                            </div>
+                            <div>
+                                <label
+                                    htmlFor="email"
+                                    className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                                >
+                                    Phone number
+                                </label>
+                                <input
+                                    type="text"
+                                    name="phone"
+                                    id="phone"
+                                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                    placeholder="your number"
+                                    required=""
+                                    onChange={(e) => setPhoneNumber(e.target.value)}
                                 />
                             </div>
                             <div>
@@ -67,7 +107,8 @@ export default function Signup() {
                                     className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                     placeholder="name@company.com"
                                     required=""
-                                    onChange={(e)=> setEmail(e.target.value)}
+                                    onChange={(e) => setEmail(e.target.value)}
+
                                 />
                             </div>
                             <div>
@@ -84,7 +125,7 @@ export default function Signup() {
                                     placeholder="••••••••"
                                     className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                     required=""
-                                    onChange={(e)=> setPassword(e.target.value)}
+                                    onChange={(e) => setPassword(e.target.value)}
                                 />
                             </div>
                             <div>
@@ -129,9 +170,9 @@ export default function Signup() {
                                 </div>
                             </div>
                             <button
-                                onClick={handleSignup}
                                 type="submit"
                                 className="w-full text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+                                onClick={handleBtnSignup}
                             >
                                 Create an account
                             </button>

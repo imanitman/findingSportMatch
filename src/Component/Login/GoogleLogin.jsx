@@ -6,9 +6,9 @@ export default function BtnGoogleLogin() {
     const CLIENT_ID = '920327711089-hf8j7927dilqkonruu7ba5ud7qevrdfa.apps.googleusercontent.com';
 
     const handleLoginSuccess = async (resGoogle) => {
-        const tokenGo = resGoogle.credential; // Sửa lỗi `CREDENTIAL` thành `credential`
+        const tokenGo = resGoogle.credential;
         try {
-            const response = await axios.post('http://localhost:8080/auth/google', { token: tokenGo });
+            const response = await axios.post('http://localhost:8080/auth/google', {token: tokenGo });
             if (response.data) {
                 console.log("Verified successfully");
             } else {
