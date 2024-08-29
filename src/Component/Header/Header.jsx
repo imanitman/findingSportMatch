@@ -1,15 +1,15 @@
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Link } from 'react-router-dom'
 
 const navigation = [
-    { name: 'Trang chủ', href: '#', current: true},
-    { name: 'Bóng đá', href: '/football', current: false },
-    { name: 'Bóng chuyền', href: '#', current: false },
-    { name: 'Bóng rổ', href: '#', current: false },
-    { name: 'Cầu lông', href: '#', current: false },
-    { name: 'Quần vợt', href: '#', current: false },
-    { name: 'Bóng bàn', href: '#', current: false },
-    // { name: 'Bi-a', href: '#', current: false },
+    { name: 'Trang chủ', to : '/' ,current: true},
+    { name: 'Bóng đá', to : '/football' ,current: false },
+    { name: 'Bóng chuyền', to : '/volleyball', current: false },
+    { name: 'Bóng rổ', to : '/basketball', current: false },
+    { name: 'Cầu lông', to : '/badminton' ,current: false },
+    { name: 'Quần vợt', to : '/tennis' ,current: false },
+    { name: 'Bóng bàn', to : '/tabletennis', current: false },
   ]
   function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
@@ -17,7 +17,7 @@ const navigation = [
 
 function Header() {
   return (
-       <Disclosure as="nav" className="bg-gray-800 w-screen sticky top-0 fixed top-0 left-0 right-0">
+       <Disclosure as="nav" className="bg-gray-800 w-full sticky top-0 fixed top-0 left-0 right-0">
       <div className="mx-auto w-full sm:px-6 px-2 lg:px-8 ">
         <div className="relative flex h-16 items-center justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -40,7 +40,8 @@ function Header() {
             <div className="hidden sm:ml-6 sm:block ">
               <div className="flex space-x-4 ml-3">
                 {navigation.map((item) => (
-                  <a
+                  <Link
+                  to={item.to}
                     key={item.name}
                     href={item.href}
                     aria-current={item.current ? 'page' : undefined}
@@ -50,7 +51,7 @@ function Header() {
                     )}
                   >
                     {item.name}
-                  </a>
+                  </Link>
                 ))}
               </div>
             </div>
@@ -88,9 +89,9 @@ function Header() {
                 className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
               >
                 <MenuItem>
-                  <a href="#" className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100">
+                  <Link to={'profile'} className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100">
                     Your Profile
-                  </a>
+                  </Link>
                 </MenuItem>
                 <MenuItem>
                   <a href="#" className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100">
@@ -98,9 +99,9 @@ function Header() {
                   </a>
                 </MenuItem>
                 <MenuItem>
-                  <a href={'/login'} className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100">
+                  <Link to={'/login'} className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100">
                     Login
-                  </a>
+                  </Link>
                 </MenuItem>
               </MenuItems>
             </Menu>

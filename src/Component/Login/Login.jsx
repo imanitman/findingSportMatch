@@ -1,21 +1,24 @@
 import BtnGoogleLogin from "./GoogleLogin"
 import axios from "axios"
-import { useState } from "react"
+import { useState, useCallback } from "react"
 import React from "react"
+import { Link } from "react-router-dom"
 export default function Login(){
   const [username, setUsername] = useState("")
   const [password, setPassword] = useState("")
-  const handleBtnLogin = async(e) =>{
-    e.preventDefault();
-    try{
-      const response =  await axios.post("http://localhost:8080/auth/login",{username, password})
-      if (response != null){
-        console.log("log in successfull");
+
+  const handleBtnLogin = useCallback(async (e) => {
+      e.preventDefault();
+      try {
+          const response = await axios.post("http://localhost:8080/auth/login", { username, password });
+          if (response != null) {
+              console.log("log in successful");
+          }
+      } catch (error) {
+          console.log("error: " + error);
       }
-    }catch(error){
-      console.log("error" + error);
-    }
-  }
+  }, [username, password]);
+
     return(
         <div>
         <section className="w-screen bg-gray-50 dark:bg-gray-900">
@@ -107,12 +110,12 @@ export default function Login(){
                 <BtnGoogleLogin className="rounded-md"></BtnGoogleLogin>
                 <p className="text-sm font-light text-gray-500 dark:text-gray-400">
                   Don’t have an account yet?{" "}
-                  <a
-                    href={"/signup"}
+                  <Link
+                    to={"/signup"}
                     className="font-medium text-primary-600 hover:underline dark:text-primary-500"
                   >
                     Sign up
-                  </a>
+                  </Link>
                 </p>
               </form>
             </div>

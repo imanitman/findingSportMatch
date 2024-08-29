@@ -1,11 +1,9 @@
 import AllMatchs from "./allMatch";
 import Events from "./Events";
 import Page2DateBar from "../../Page2Detail/Page2DateBar"
-import Header from "../../Header/Header";
 export default function Football(){
     return (
         <>
-            <Header></Header>
             <div className="mb-5">
                 <Page2DateBar></Page2DateBar>
             </div>

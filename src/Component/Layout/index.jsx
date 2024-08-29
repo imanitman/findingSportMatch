@@ -4,7 +4,7 @@ import Header from '../Header/Header';
 function Layout() {
   return (
     <div>
-      <h1><Header></Header></h1>
+      <Header/>
       <main>
         <Outlet />
       </main>

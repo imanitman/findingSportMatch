@@ -12,23 +12,30 @@ import SelectAddress from "./Component/MapSystem/SelectAddress.jsx";
 import SportGenre from "./Component/MatchesRequestPopUP/SportsGenre.jsx";
 import MatchesRequest from "./Component/MatchesRequestPopUP/MatchesRequest.jsx";
 import MatchesRequestPopUP from "./Component/MatchesRequestPopUP/MatchesRequestPopUp.jsx";
-
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Layout from "./Component/Layout/index.jsx";
+import HomePage from "./Component/HomePage/homepage.jsx";
+import Football from "./Component/DetailSport/Football/Football.jsx";
+import Login from "./Component/Login/Login.jsx";
+import Signup from "./Component/Login/Signup.jsx";
+import RelatedMatchs from "./Component/DetailMatch/DetailMatch.jsx";
+import Profile from "./Component/Profile/Profile.jsx";
 function App() {
   return (
-    <div >
-      <Header></Header>
-      <MainPicture></MainPicture>
-      <div className="text-center">
-      <Matches></Matches>
-      <div className="flex">
-        <div className="w-1/12"></div>
-        <div className="w-10/12"><EV></EV></div>
-        <div className="w-1/12"></div>
-
-      </div>
-
-      </div>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<HomePage />} />
+          <Route path="football" element={<Football />} />
+          <Route path="login" element={<Login />} />
+          <Route path="signup" element={<Signup />} />
+          <Route path="detail" element={<RelatedMatchs />} />
+          <Route path="profile" element={<Profile />} />
+          <Route path="matchs/create" element={<MatchesRequestPopUP />} />
+        </Route>
+      </Routes>
+    </Router>
   )
 }
 export default App;

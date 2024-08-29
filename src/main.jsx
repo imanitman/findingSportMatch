@@ -51,6 +51,6 @@ import MatchesRequest from './Component/MatchesRequestPopUP/MatchesRequest.jsx'
 // ])
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={routers} />
+    <App />
   </React.StrictMode>,
 )
