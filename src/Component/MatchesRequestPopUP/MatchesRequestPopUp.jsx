@@ -5,6 +5,9 @@ import EVButton from "../Evting/EVbutton";
 import Header from "../Header/Header";
 
 function MatchesRequestPopUP() {
+    const handleCreateMatch = async() =>{
+        const res = axios.post("")
+    }
     return (
         <div className="container h-screen">
             <Header></Header>
@@ -14,7 +17,7 @@ function MatchesRequestPopUP() {
                 <AddressMap />
             </div>
             <div className="flex justify-center ">
-                <EVButton
+                <EVButton onClick={handleCreateMatch}
                     name="Tạo trận đấu"
                 />
 

@@ -15,40 +15,40 @@ import FormInput from './Component/MatchesRequestPopUP/FormInput.jsx'
 import MatchesRequestPopUP from './Component/MatchesRequestPopUP/MatchesRequestPopUp.jsx'
 import MatchesRequest from './Component/MatchesRequestPopUP/MatchesRequest.jsx'
 
-const routers =  createBrowserRouter([
-  {
-    path:"/",
-    element:<App></App>
-  },
-  {
-    path:"/login",
-    element:<Login></Login>
-  },
-  {
-    path:"/signup",
-    element:<Signup></Signup>
-  },
-  {
-    path:"/football",
-    element:<Football></Football>
-  },
-  {
-    path:"/detail",
-    element:<RelatedMatchs></RelatedMatchs>
-  },
-  {
-    path:"/mymatch",
-    element:<MyMatch />
-  },
-  {
-    path:"/profile",
-    element:<Profile></Profile>
-  },
-  {
-    path:"/create/matchs",
-    element:<MatchesRequestPopUP />
-  }
-])
+// const routers =  createBrowserRouter([
+//   {
+//     path:"/",
+//     element:<App></App>
+//   },
+//   {
+//     path:"/login",
+//     element:<Login></Login>
+//   },
+//   {
+//     path:"/signup",
+//     element:<Signup></Signup>
+//   },
+//   {
+//     path:"/football",
+//     element:<Football></Football>
+//   },
+//   {
+//     path:"/detail",
+//     element:<RelatedMatchs></RelatedMatchs>
+//   },
+//   {
+//     path:"/mymatch",
+//     element:<MyMatch />
+//   },
+//   {
+//     path:"/profile",
+//     element:<Profile></Profile>
+//   },
+//   {
+//     path:"/create/matchs",
+//     element:<MatchesRequestPopUP />
+//   }
+// ])
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <RouterProvider router={routers} />
