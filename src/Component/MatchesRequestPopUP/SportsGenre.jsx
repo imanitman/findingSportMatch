@@ -1,6 +1,6 @@
 import React from "react";
 
-const Sport = ["Bóng đá", "Bóng Chuyền", "Bóng rổ", "Cầu lông", "Quần Vợt", "Bóng bàn", "Bi-a"]
+const Sport = ["Bóng đá", "Bóng Chuyền", "Bóng rổ", "Cầu lông", "Quần Vợt", "Bóng bàn"]
 
 function SportGenre() {
 

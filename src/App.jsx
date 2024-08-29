@@ -15,22 +15,20 @@ import MatchesRequestPopUP from "./Component/MatchesRequestPopUP/MatchesRequestP
 
 function App() {
   return (
-    <>
+    <div >
       <Header></Header>
       <MainPicture></MainPicture>
+      <div className="text-center">
       <Matches></Matches>
-      <EV></EV>
-      {/* <Slideshow /> */}
-      {/* <TeamVS/> */}
-      {/* <ContentPlace /> */}
-      {/* <SelectMap /> */}
-      {/* <AddressMap /> */}
-      {/* <SelectOption /> */}
-      {/* <SelectAddress /> */}
-      {/* <SportGenre /> */}
-      {/* <MatchesRequest /> */}
-      {/* <MatchesRequestPopUP /> */}
-    </>
+      <div className="flex">
+        <div className="w-1/12"></div>
+        <div className="w-10/12"><EV></EV></div>
+        <div className="w-1/12"></div>
+
+      </div>
+
+      </div>
+    </div>
   )
 }
 export default App;

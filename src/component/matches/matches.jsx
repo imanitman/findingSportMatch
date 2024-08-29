@@ -44,7 +44,7 @@ function Matches(){
 
     return (
         <div className="mt-3 items-center">
-            <p className="font-bold text-3xl border-l-4 pl-3 mb-3 ">Các trận đấu hấp dẫn</p>
+            <p className="font-bold text-3xl border-l-4 border-r-4 pl-3 mb-3 ">Các trận đấu hấp dẫn</p>
             <div className="flex flex-wrap gap-5 ml-5">
             {data.map((match, index)=>(
                 <div key={index} className="Matches w-1/4 bg-zinc-200 p-3">

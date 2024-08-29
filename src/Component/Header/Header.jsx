@@ -9,7 +9,7 @@ const navigation = [
     { name: 'Cầu lông', href: '#', current: false },
     { name: 'Quần vợt', href: '#', current: false },
     { name: 'Bóng bàn', href: '#', current: false },
-    { name: 'Bi-a', href: '#', current: false },
+    // { name: 'Bi-a', href: '#', current: false },
   ]
   function classNames(...classes) {
     return classes.filter(Boolean).join(' ')

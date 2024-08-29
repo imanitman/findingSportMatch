@@ -6,7 +6,7 @@ import EVImg from "./EVImg.jsx";
 
 function EV(){
     return(
-        <div className="flex w-screen mt-6">
+        <div className="flex w-full mt-6">
             <div className="w-1/2">
                 <EventHead />
                 <div className="flex justify-between">

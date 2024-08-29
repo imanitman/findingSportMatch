@@ -4,7 +4,7 @@ import Button from "../../matches/button/button";
 export default function AllMatchs(){
     return(
         <div className="border-b-2 border-slate-500">
-            <div className="w-screen flex items-center justify-between px-10 mb-10 ">
+            <div className="w-full flex items-center justify-between px-10 mb-10 ">
                 <div className="flex items-center gap-7">
                     <TeamMatch />
                     <Matches_time></Matches_time>
@@ -17,7 +17,7 @@ export default function AllMatchs(){
                     <Button></Button>
                 </div>
             </div>
-            <div className="w-screen flex items-center justify-between px-10 mb-10 ">
+            <div className="w-full flex items-center justify-between px-10 mb-10 ">
                 <div className="flex items-center gap-7">
                     <TeamMatch />
                     <Matches_time></Matches_time>
@@ -30,7 +30,7 @@ export default function AllMatchs(){
                     <Button></Button>
                 </div>
             </div>
-            <div className="w-screen flex items-center justify-between px-10 mb-10 ">
+            <div className="w-full flex items-center justify-between px-10 mb-10 ">
                 <div className="flex items-center gap-7">
                     <TeamMatch />
                     <Matches_time></Matches_time>

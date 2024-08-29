@@ -12,11 +12,11 @@ function Slideshow() {
   const [SelectImage, setSelectedImage] = useState(images[0])
 
   return (
-    <div class="grid gap-4">
+    <div className="grid gap-4">
       <div className="justify-center flex">
-        <img class="h-auto max-w-full rounded-lg" src={SelectImage} alt="" />
+        <img className="h-auto max-w-full rounded-lg" src={SelectImage} alt="" />
       </div>
-      <div class="grid grid-cols-5 gap-4">
+      <div className="grid grid-cols-5 gap-4">
       {images.map((image, index) => (
           <img
             key={index}

@@ -34,8 +34,8 @@ function Page2DateBar(){
       }
 
     return(
-        <div className="bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%
-                        flex items-center justify-around w-screen">
+        <div className="bg-gradient-to-r from-indigo-600 via-indigo-800 from-indigo-600
+                        flex items-center justify-between w-screen">
           <button onClick={BtnDownWeek} className=""><i className="bi bi-caret-left-fill"></i></button>
           
           {SelectWeek.map(renderDateComponent)}
