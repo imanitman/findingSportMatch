@@ -3,9 +3,9 @@ import { Outlet } from 'react-router-dom';
 import Header from '../Header/Header';
 function Layout() {
   return (
-    <div>
+    <div className='min-h-screen'>
       <Header/>
-      <main>
+      <main className=''>
         <Outlet />
       </main>
     </div>

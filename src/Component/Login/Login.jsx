@@ -9,8 +9,9 @@ export default function Login(){
 
   const handleBtnLogin = useCallback(async (e) => {
       e.preventDefault();
+      const apiUrl =  import.meta.env.VITE_API_URL;
       try {
-          const response = await axios.post("http://localhost:8080/auth/login", { username, password });
+          const response = await axios.post(apiUrl+"auth/login", { username, password });
           if (response != null) {
               console.log("log in successful");
           }

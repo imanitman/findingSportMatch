@@ -32,7 +32,6 @@ function App() {
           <Route path="signup" element={<Signup />} />
           <Route path="detail" element={<RelatedMatchs />} />
           <Route path="profile" element={<Profile />} />
-          <Route path="matchs/create" element={<MatchesRequestPopUP />} />
         </Route>
       </Routes>
     </Router>

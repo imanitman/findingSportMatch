@@ -10,7 +10,7 @@ function FormInput(props) {
                         dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" 
                 placeholder=" "
                 // pattern="^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?"
-                required 
+                required
             />
             <label 
                 for="floating_email" 

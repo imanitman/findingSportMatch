@@ -1,12 +1,13 @@
 import React from "react";
 import FormInput from "./FormInput";
 import SportGenre from "./SportsGenre";
-
+import axios from "axios";
+import { useState, useCallback } from "react";
 
 function MatchesRequest() {
     return (
         <div className="w-4/12">
-            <SportGenre />
+            <SportGenre sendTypeSport={handleTypeOfSport} />
 
             <FormInput
                 type={"text"}
