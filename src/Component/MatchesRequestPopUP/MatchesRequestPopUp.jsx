@@ -10,7 +10,6 @@ function MatchesRequestPopUP() {
     }
     return (
         <div className="container h-screen">
-            <Header></Header>
             <div className="mt-3 mx-12"><p className="text-xl">Tạo trận đấu</p></div>
             <div className="flex gap-32 mx-14 mt-6">
                 <MatchesRequest />

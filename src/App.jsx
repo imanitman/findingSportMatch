@@ -21,6 +21,7 @@ import Login from "./Component/Login/Login.jsx";
 import Signup from "./Component/Login/Signup.jsx";
 import RelatedMatchs from "./Component/DetailMatch/DetailMatch.jsx";
 import Profile from "./Component/Profile/Profile.jsx";
+import CreateTeam from "./Component/Team/CreateTeam.jsx";
 function App() {
   return (
     <Router>
@@ -33,6 +34,7 @@ function App() {
           <Route path="detail" element={<RelatedMatchs />} />
           <Route path="profile" element={<Profile />} />
           <Route path="matchs/create" element={<MatchesRequestPopUP />} />
+          <Route path="create/team" element={<CreateTeam />}></Route>
         </Route>
       </Routes>
     </Router>

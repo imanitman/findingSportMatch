@@ -2,17 +2,23 @@ import BtnGoogleLogin from "./GoogleLogin"
 import axios from "axios"
 import { useState, useCallback } from "react"
 import React from "react"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
+import BaseUrl from "../../../BaseURL"
+
 export default function Login(){
   const [username, setUsername] = useState("")
   const [password, setPassword] = useState("")
+  const navigate = useNavigate();
 
   const handleBtnLogin = useCallback(async (e) => {
+      const baseurl = BaseUrl()
       e.preventDefault();
       try {
-          const response = await axios.post("http://localhost:8080/auth/login", { username, password });
+          const response = await axios.post( `${baseurl}/auth/login`, { username, password });
           if (response != null) {
               console.log("log in successful");
+              console.log(response.data);
+              navigate("/")
           }
       } catch (error) {
           console.log("error: " + error);

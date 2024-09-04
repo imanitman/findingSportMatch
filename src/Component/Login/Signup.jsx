@@ -1,14 +1,23 @@
 import { useState } from "react"
 import axios from "axios"
+import BaseUrl from "../../../BaseURL"
+
 export default function Signup() {
     const [username, setUsername] = useState("")
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const [address, setAddress] = useState("")
     const [phoneNumber, setPhoneNumber] = useState("")
+
     const handleBtnSignup = async () => {
+        const baseurl = BaseUrl()
         try {
-            const res = await axios.post("http://localhost:8080/auth/signup", { username, email, password, address, phoneNumber})
+            const response = await axios.post(  `${baseurl}/auth/signup`, { username, email, password, address, phoneNumber})
+            if (response != null) {
+                console.log("sign up in successful");
+                console.log(response.data);
+                navigate("/create/team")
+            }
         }catch (error){
             console.log(error);
         }
