@@ -1,18 +1,41 @@
-import { useState } from "react"
+import { useState, useCallback } from "react"
 import axios from "axios"
+import { useNavigate } from "react-router-dom"
+
 export default function Signup() {
     const [username, setUsername] = useState("")
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const [address, setAddress] = useState("")
     const [phoneNumber, setPhoneNumber] = useState("")
-    const handleBtnSignup = async () => {
+    const navigate = useNavigate();
+    const baseurl = import.meta.env.VITE_API_URL;
+
+    // const handleBtnSignup = async () => {
+    //     try {
+    //         const response = await axios.post(  baseurl+"auth/signup", { username, email, password, address, phoneNumber})
+    //         if (response != null) {
+    //             console.log("sign up in successful");
+    //             navigate("/create/team")
+    //         }
+    //     }catch (error){
+    //         console.log(error);
+    //     }
+    // }
+    const handleBtnSignup = useCallback(async (e) => {
+        e.preventDefault();
+        const apiUrl =  import.meta.env.VITE_API_URL;
         try {
-            const res = await axios.post("http://localhost:8080/auth/signup", { username, email, password, address, phoneNumber})
-        }catch (error){
-            console.log(error);
+            const response = await axios.post("http://localhost:8080/auth/signup", {username, email, password, address, phoneNumber});
+            if (response != null) {
+                console.log("signup successful");
+                console.log(response.data);
+                navigate("/create/team")
+            }
+        } catch (error) {
+            console.log("error: " + error);
         }
-    }
+    }, [username, password]);
     return (
         <section className=" w-screen bg-gray-50 dark:bg-gray-900">
             <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
