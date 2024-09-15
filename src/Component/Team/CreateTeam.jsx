@@ -35,11 +35,13 @@ export default function CreateTeam() {
         formData.append("logo", logo); // Sử dụng logo mới nhất
     
         const apiUrl = import.meta.env.VITE_API_URL;
+        const token = localStorage.getItem("accessToken")
     
         try {
             const response = await axios.post(apiUrl + "teams", formData, {
                 headers: {
                     "Content-Type": "multipart/form-data",
+                    Authorization: `Bearer ${token}`
                 },
             });
     

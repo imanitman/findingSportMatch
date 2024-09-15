@@ -15,6 +15,8 @@ export default function Login(){
           const response = await axios.post(apiUrl+"auth/login", { username, password });
           if (response != null) {
               console.log("log in successful");
+              console.log(response.data.access_token);
+              localStorage.setItem("accessToken", response.data.access_token);
               navigate("/")
           }
       } catch (error) {
