@@ -52,7 +52,7 @@ function Matches() {
                             <Tournament />
                             <div className="score text-center py-4">
                                 {match.team1 && <Team teamData={match.team1} />}
-                                <Matches_time className="mr-6" time={match.time} />
+                                <Matches_time className="mr-6" time={match.matchTime} />
                                 {match.team2 == null ? (
                                     <img
                                         src="https://banner2.cleanpng.com/20180816/gpc/dd45b53c0bd513f8516eef60cea58dfa.webp"
