@@ -19,11 +19,11 @@ function App() {
           <Route path="football" element={<Football />} />
           <Route path="login" element={<Login />} />
           <Route path="signup" element={<Signup />} />
-          <Route path="detail" element={<RelatedMatchs />} />
           <Route path="profile" element={<Profile />} />
           <Route path="matchs/create" element={<MatchesRequestPopUP />} />
           <Route path="create/team" element={<CreateTeam />}></Route>
           <Route path="create/match" element={< CreateMatch/>} />
+          <Route path="detail/match/:id" element={<RelatedMatchs/>}/>
         </Route>
       </Routes>
     </Router>

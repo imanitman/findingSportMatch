@@ -1,11 +1,16 @@
 import React from "react";
 
-function ContentPlace(props) {
+function ContentPlace({matchDetail = {}}) {
+    const matchTimes = matchDetail.matchTime
+    console.log(matchTimes);
+    
+    
+
     return (
         <div className="">
             <div className="flex flex-col items-center absolute gap-5">
                 <p className="text-2xl text-blue-500">Thông tin chi tiết</p>
-                <h5 className="">Thời Gian: 22/07/2004</h5>
+                <h5 className="">Thời Gian:</h5>
                 <h5>Sân: Hồng Anh, Đại Mạch, Đông Anh, Hà Nội</h5>
                 <h5>Thể Loại:Sân 7</h5>
                 <div className="flex justify-around gap-3">
